@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* body {
+    background-color: rgb(91, 93, 93);
+} */
+
+:root{
+    --main-color: #f8b281;
+    --secondary-color: #1b1b1b;
+}
+
+@font-face{
+    font-family: "space";
+    src: url("./assets/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 125%;
+    padding: 1rem 0rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 125%;
+}
+
+.links {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-family: "space", sans-serif;
+}
+
+.logo img {
+    width: 1.5rem;
+}
+
+.front-page {
+    min-height: 100vh;
+    background-color: lightblue;
+}
