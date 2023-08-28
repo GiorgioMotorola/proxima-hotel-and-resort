@@ -8,12 +8,9 @@ html, body {
     height: 100%;
 }
 
-body {
-    background-color: rgb(91, 93, 93);
-}
 
 :root {
-    --main-color: #f8b281;
+    --main-color: #1f91d7;
     --secondary-color: #1b1b1b;
 }
 
@@ -115,3 +112,30 @@ nav svg {
     object-fit: cover;
     z-index: -1;
 }
+
+.booking {
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: "space", sans-serif;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.golf, .bed, .water-park {
+    position: relative;
+}
+
+.images h3 {
+    position: absolute;
+    color: var(--main-color);
+    text-shadow: rgba(0, 0, 0, 0.49);
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 2rem;
+}
+
