@@ -12,19 +12,39 @@ burger.addEventListener("click", () => {
     gsap.fromTo(
       ".links a",
       { opacity: 0, y: 0 },
-      { opacity: 1, y: 20, delay: 0.25, stagger: 0.25 }
+      { opacity: 1, y: 20, delay: 0.25, stagger: 0.1 }
     );
     gsap.set("body", { overflow: "hidden" });
   }
   burger.classList.toggle("active");
 });
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-500px";
+    document.getElementById("navbar").style.top = "-50px";
   }
+  prevScrollpos = currentScrollPos;
 }
+
+window.addEventListener('scroll', () => {  
+  let scrollTop = document.documentElement.scrollTop;
+  console.log(scrollTop);
+  document.querySelector('.pcbh-image').style.width = 100 + scrollTop / 80 + '%';
+});
+
+
+    const imageLinks = document.querySelectorAll('.image-link');
+    const imageContainer = document.querySelector('.image-container');
+    const hoverImage = document.querySelector('.hover-image');
+
+    imageLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            const newImageSrc = link.getAttribute('data-image');
+            hoverImage.src = newImageSrc;
+        });
+    });
+

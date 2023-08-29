@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html, body {
-    height: 100%;   
+    height: 100%;
 }
 
 body {
@@ -14,13 +15,24 @@ body {
 
 
 :root {
-    --main-color: #003b59;
-    --secondary-color: #1b1b1b;
+    --main-color: #1CE3D9;
+    --secondary-color: #E31C26;
 }
 
 @font-face{
     font-family: "space";
     src: url("./assets/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+.bg-color {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+
 }
 
 section {
@@ -88,20 +100,72 @@ nav svg {
 }
 
 .front-page {
-    min-height: 100vh;   
+    min-height: 75vh;   
     color: white;
 }
+
+.mid-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px;
+    font-family: "space", "sans-serif";  
+}
+
+.mid-section a {
+    border-style: solid;
+    color: white;
+    padding: 1rem;
+    border-bottom: black;
+    border-left: black;
+    border-right: black;  
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+.mid-section a:hover {
+    opacity: 1;
+    color: white;
+    
+}
+
+/* .img-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+} */
+
+
+.image-container {
+    width: 100%; 
+    height: 70vh; 
+    overflow: hidden;
+}
+
+.hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
 
 .selling-point {
     margin-top: 25vh;
     font-family: "space", sans-serif;
-    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.49);
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 3);
     text-align: center;
 }
 
 .selling-point h3 {
     font-family: sans-serif;
-    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.49);
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 3);
 }
 
 .ctas {
@@ -119,7 +183,7 @@ nav svg {
 
 .cta-first {
     background-color: var(--main-color);
-    color: var(--secondary-color);
+    color: white;
 }
 
 .cta-sec {
@@ -198,14 +262,22 @@ nav svg {
       }
       
 
+      #navbar {
+        background-color: black; 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        transition: top 0.3s; 
+      }
+      
+     
       #navbar a {
         float: left;
         display: block;
         color: white;
         text-align: center;
-        padding: 30px;
+        padding: 15px;
         text-decoration: none;
-        font-family: "space", sans-serif;
       }
       
       #navbar a:hover {
@@ -216,6 +288,7 @@ nav svg {
       #logo {
         display: flex;
         align-items: center;
+        
     }
     
     #logoh1 {
@@ -231,11 +304,14 @@ nav svg {
     
     #logo img {
         width: 1.5rem;
+        margin-right: 15px;
     }
 
       nav {
         display: none;
       }
+
+      
 }
 
 @media only screen and (max-width: 900px) {
@@ -247,5 +323,20 @@ nav svg {
         display: none;
       }
 
+      body {
+        margin: 0;
+        background-color: black;
+      }
+
+      .image-container {
+        display: none;
+      }
 }
+
+@media only screen and (max-width: 1155px) {
+    .mid-section {
+        display: none;
+    }
+}
+
 
