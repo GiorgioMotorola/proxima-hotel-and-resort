@@ -145,6 +145,7 @@ nav svg {
     width: 100%; 
     height: 70vh; 
     overflow: hidden;
+    margin-top: 100px;
 }
 
 .hover-image {
