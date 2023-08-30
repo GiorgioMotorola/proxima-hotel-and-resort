@@ -202,21 +202,30 @@ nav svg {
     z-index: -1;
 }
 
-.booking {
-    color: var(--secondary-color);
-    text-align: center;
-    font-family: "space", sans-serif;
+
+.hidden {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: white;
+    padding: 125px;
+    opacity: 0;
+    gap: 30px;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: ease-in-out 1s;
 }
 
-.images img {
-    width: 100%;
-    border-radius: 1rem;
-    margin-top: 1rem;
+.hidden img {
+    width: 40vh;
+    height: 25vh;
 }
 
-.golf, .bed, .water-park {
-    position: relative;
-}
+ .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+ }
 
 .images h3 {
     position: absolute;
@@ -227,7 +236,6 @@ nav svg {
     transform: translate(-50%, -10%);
     font-size: 2rem;
 }
-
 
 .about {
     color: var(--secondary-color);
@@ -247,6 +255,71 @@ nav svg {
     width: 100%;
     margin-top: 2rem;
 }
+
+.footer {
+    display: flex;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 100px 15%;
+    background-color: black;
+    color: white;
+    font-family: "space", "sans-serif";
+}
+
+.footer div {
+    text-align: center;
+}
+
+.foot-col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.foot-col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
 
 @media only screen and (min-width: 900px) {
 
@@ -332,6 +405,23 @@ nav svg {
       .image-container {
         display: none;
       }
+
+      .hidden {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+        align-content: center;
+        margin-top: 500px;
+        color: white;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 @media only screen and (max-width: 1155px) {
