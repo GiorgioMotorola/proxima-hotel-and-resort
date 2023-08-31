@@ -32,20 +32,16 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-
 }
 
-section {
-    padding: 5%;
-}
 
-h2 {
+.selling-point h2 {
     font-size: 2.5rem;
     line-height: 125%;
     padding: 1rem 0rem;
 }
 
-h3 {
+.selling-point h3 {
     font-size: 1.25rem;
     line-height: 125%;
 }
@@ -196,7 +192,6 @@ nav svg {
     box-shadow: 0px 4px 24px rgba(9, 160, 210, 0.5);
 }
 
-
 .pcbh-image {
     position: absolute;
     left: 0;
@@ -206,7 +201,6 @@ nav svg {
     object-fit: cover;
     z-index: -1;
 }
-
 
 .hidden {
     display: flex;
