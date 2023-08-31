@@ -77,10 +77,10 @@ nav svg {
 }
 
 .links a {
-    color: var(--secondary-color);
+    color: black;
     font-size: 2rem;
     text-decoration: none;
-    
+    text-decoration: underline;
 }
 
 
@@ -122,24 +122,17 @@ nav svg {
     text-decoration: none;
     opacity: 0.7;
     transition: 0.3s;
+    animation: pulse 1s infinite;
+    transition: 1s;
 }
 
 
 .mid-section a:hover {
     opacity: 1;
     color: white;
-    
+    animation: pulse 1s infinite;
+    transition: .5s;
 }
-
-/* .img-container img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-    padding: 100px;
-} */
-
 
 .image-container {
     width: 100%; 
@@ -185,12 +178,24 @@ nav svg {
 .cta-first {
     background-color: var(--main-color);
     color: white;
+    cursor: pointer;
 }
+
+.cta-first:hover {
+    box-shadow: 0px 4px 24px rgba(210, 9, 69, 0.5);
+}
+
 
 .cta-sec {
     background-color: var(--secondary-color);
     color: white;
+    cursor: pointer;
 }
+
+.cta-sec:hover {
+    box-shadow: 0px 4px 24px rgba(9, 160, 210, 0.5);
+}
+
 
 .pcbh-image {
     position: absolute;
@@ -205,26 +210,39 @@ nav svg {
 
 .hidden {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    color: white;
+    color: black;
     background-color: white;
-    padding: 125px;
+    padding: 60px;
     opacity: 0;
-    gap: 30px;
+    gap: 15px;
     filter: blur(5px);
-    transform: translateX(-100%);
-    transition: ease-in-out 1s;
+    transition: ease-in-out .75s;
+    
+}
+
+.hidden h3 {
+    font-family: "space", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
 }
 
 .hidden img {
     width: 40vh;
     height: 25vh;
+
+}
+
+.hidden img:hover {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
 }
 
  .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
  }
 
 .images h3 {
@@ -281,6 +299,8 @@ nav svg {
     letter-spacing: 1px;
 }
 
+
+
 .foot-col-1 a {
     display: block;
     text-decoration: none;
@@ -310,6 +330,10 @@ form button {
     cursor: pointer;
 }
 
+form button:hover {
+    box-shadow: 0px 4px 24px rgba(223, 221, 221, 0.216);
+}
+
 .social-icons {
     margin-top: 30px;
 }
@@ -320,12 +344,16 @@ form button {
     cursor: pointer;
 }
 
+.social-icons i:hover {
+    box-shadow: 0px 4px 24px rgba(223, 221, 221, 1);
+}
+
 
 @media only screen and (min-width: 900px) {
 
     #navbar {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         background-color: black; 
         position: fixed; 
         top: -50px; 
@@ -352,24 +380,25 @@ form button {
         text-align: center;
         padding: 15px;
         text-decoration: none;
+        transition: 2s;
       }
       
       #navbar a:hover {
         background-color: #ddd;
         color: black;
+        animation: pulse 1s infinite;
+        transition: 1s;
       }
 
       #logo {
         display: flex;
-        align-items: center;
-        
+        align-items: center;   
     }
     
     #logoh1 {
         margin-left: 0.5rem;
         font-size: 1rem;
-        font-family: "space", sans-serif;
-        
+        font-family: "space", sans-serif;   
     }
 
     section {
@@ -383,9 +412,7 @@ form button {
 
       nav {
         display: none;
-      }
-
-      
+      }     
 }
 
 @media only screen and (max-width: 900px) {
@@ -414,12 +441,24 @@ form button {
         place-items: center;
         align-content: center;
         margin-top: 500px;
-        color: white;
+        color: black;
+    }
+
+    .hidden h3 {
+        font-family: "space", sans-serif;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
     }
 
     .footer {
         display: flex;
         flex-direction: column;
+    }
+
+    form button {
+        margin-bottom: 20px;
     }
     
 }
