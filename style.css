@@ -343,6 +343,84 @@ form button:hover {
 }
 
 
+
+.booking-form {
+    display: flex;
+    background-color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #506982;
+    border-bottom: 1px solid #506982;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    justify-content: center;  
+}
+
+.booking-form h3 {
+    font-weight: 100;
+    border-bottom: 1px solid #506982;
+    padding-bottom: 3px;
+    margin-bottom: 20px; 
+}
+
+
+
+#fname, #lname {
+    border: .5px solid #506982;
+    width: 900px;
+    text-align: left; 
+    font-size: large;
+    margin-top: -100px;
+    text-indent: 10px;
+}
+
+.arrive-depart {
+    border-bottom: 1px solid #506982;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    
+}
+
+#arrive, #depart {
+    border: 1px solid #506982;  
+    margin-left: 20px;
+}
+
+.book-dropdowns {
+    padding: 50px;
+}
+
+.drop-group {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.comments {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#btn-submit {
+  margin-top: 10px;
+  cursor: pointer;
+  color: black;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+    font-size: 1rem; 
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.216);
+    margin: 1rem;
+}
+
+
 @media only screen and (min-width: 900px) {
 
     #navbar {

@@ -68,7 +68,7 @@
                 <img src="./assets/shuttle-icon.png" alt="logo">
                 <h2>Proxima Hotel & Resort</h2>
             </div>
-                <a href="#">Book</a>
+                <a href="#booking-form">Book</a>
                 <a href="#">Explore</a>
                 <a href="#">Private Shuttle</a>
                 <a href="#">Meetings and Events</a>
@@ -83,7 +83,7 @@
             <h3>Make your next vacation out of this world.</h3>
             <div class="ctas">
                 <button class="cta-sec">Explore</button>
-                <button class="cta-first">Sign up today</button>
+                <button class="cta-first">Book Room</button>
             </div>
         </div>
     </section>
@@ -93,7 +93,7 @@
         </div>
         <section class="mid-section">
             <div class="book-mid-page">
-                <a href="#" class="image-link" data-image="./assets/bookmidsection.jpg">Book</a>
+                <a href="#booking-form" class="image-link" data-image="./assets/bookmidsection.jpg">Book</a>
             </div>
             <div class="explore-mid-page">
                 <a href="#" class="image-link" data-image="./assets/landscape.png">Explore</a>
@@ -140,6 +140,83 @@
         <img src="./assets/pbh-water.jpg" alt="">
         <h3>Water for fishing and boating.</h3>
     </div> 
+</section>
+
+<section class="booking-form" id="booking-form">
+<form>
+    <h3>Book Now</h3>
+<div class="form-group">
+        <label for="fname" placeholder="First Name"></label><br>
+        <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+    <div class="form-group">
+        <label for="lname"></label><br>
+        <input type="email" id="lname" name="lname" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+        <label for="lname"></label><br>
+        <input type="tel" id="lname" name="lname" placeholder="Phone" required>
+    </div>
+</div>
+
+<div class="form-group">
+    <h3>Details</h3>
+    <div class="arrive-depart">
+        <div class="arrive">
+            <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+            <input type="date" id="arrive"  class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+        </div>
+        <div class="depart">
+            <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+            <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" /> 
+        </div>
+    </div>
+
+<div class="book-dropdowns">
+      <div class="drop-group">
+        <i class="fa fa-sort"></i>
+        <select class="floatLabel">
+          <option value="blank"></option>
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">3</option>
+          <option value="5+">5+</option>
+        </select>
+        <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
+      </div>      
+
+    <div class="drop-group">
+      <i class="fa fa-sort"></i>
+      <select class="floatLabel">
+        <option value="blank"></option>
+        <option value="deluxe" selected>Vaping</option>
+        <option value="Zuri-zimmer">Non-Vaping</option>
+      </select>
+      <label for="fruit">Vaping</label>
+     </div>     
+
+
+    <div class="drop-group">
+      <i class="fa fa-sort"></i>
+      <select class="floatLabel">
+        <option value="blank"></option>
+        <option value="single-bed">Single Bed</option>
+        <option value="double-bed" selected>Double Bed</option>
+      </select>
+      <label for="fruit">Bedding</label>
+    </div>          
+</div>
+      <div class="comments">
+        <p class="info-text">Please describe your needs e.g. Extra beds, Floor preference</p>
+        <br>
+        <div class="comments">
+          <textarea name="comments" class="floatLabel" style="height: 300px; width: 800px" id="comments"></textarea>
+          <label for="comments"></label>
+          </div>
+            <button type="submit" id="btn-submit" value="Submit" >Submit</button>
+      </div>  
+  </div>
+</form>
 </section>
 
 <footer>
